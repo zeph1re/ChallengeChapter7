@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".view.HomeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_app"
+        android:text="The Movie Database"
+        android:textSize="20sp"
+        android:textColor="@color/teal_700"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_btn"
+        android:src="@drawable/ic_account"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_welcome"
+        android:text="Hello, there"
+        android:layout_below="@id/profile_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorites_btn"
+        android:src="@drawable/ic_favorite"
+        android:layout_toStartOf="@id/profile_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_movie"
+        android:layout_below="@id/tv_welcome"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_failed"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/retry_btn"
+        android:text="Data Gagal Dimuat"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retry_btn"
+        android:text="Retry"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:backgroundTint="@color/pastel_green"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_not_found"
+        android:layout_centerInParent="true"
+        android:text="Movie Tidak Ditemukan"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+
+
+
+</RelativeLayout>
